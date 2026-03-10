@@ -5,10 +5,7 @@ import com.drupad.project.authsystem.util.DbConstants;
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.PrePersist;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 /**
  * @author Drupad S
@@ -18,7 +15,6 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
 @MappedSuperclass
 public abstract class BaseEntity {
 
