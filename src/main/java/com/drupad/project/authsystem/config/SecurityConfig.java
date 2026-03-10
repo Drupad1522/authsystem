@@ -6,6 +6,11 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
+/**
+ * @author Drupad S
+ * @version 1.0
+ * @since 2026-03-10
+ */
 
 @Configuration
 @EnableWebSecurity

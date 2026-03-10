@@ -7,6 +7,11 @@ import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+/**
+ * @author Drupad S
+ * @version 1.0
+ * @since 2026-03-10
+ */
 
 @Configuration
 public class SwaggerConfig {
