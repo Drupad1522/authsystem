@@ -65,13 +65,13 @@ public class AuthService {
         userLogin.setUserId(user.getUserId());
         userLogin.setUserPassword(passwordEncoder.encode(request.userPassword()));
         userLogin.setIsActive(true);
-        userLogin.setIsEmailVerified(true);
+        userLogin.setIsEmailVerified(false);
         userLoginRepository.save(userLogin);
 
-//        // 5. Send email verification OTP
-//        otpService.generateAndSend(user, UserOtp.OtpType.EMAIL_VERIFICATION, "Email Verification");
-//
-//        log.info("New user registered: {}", user.getUserMail());
+        // 5. Send email verification OTP
+        otpService.generateAndSend(user, UserOtp.OtpType.EMAIL_VERIFICATION, "Email Verification");
+
+        log.info("New user registered: {}", user.getUserMail());
 
         return ApiResponse.success(
             "Account created successfully. Please verify your email — an OTP has been sent to " + user.getUserMail(),
