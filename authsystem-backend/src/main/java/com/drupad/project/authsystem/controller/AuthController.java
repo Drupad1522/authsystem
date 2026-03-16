@@ -45,7 +45,7 @@ public class AuthController {
     }
 
     @Operation(summary = "Verify email using OTP — call after signup or resend")
-    @PostMapping("/verify-email/{userId}")
+    @PostMapping("/verify-email")
     public ResponseEntity<ApiResponse<LoginResponse>> verifyEmail(
             @PathVariable String userId,
             @Valid @RequestBody OtpVerifyRequest request) {
